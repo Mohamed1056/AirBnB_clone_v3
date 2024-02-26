@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-'''Script to make index file.'''
-
-from api.v1.views import app_views
+'''api status'''
 import models
-from models.base_moodel import BaseModel
+from models import storage
+from models.base_model import BaseModel
 from flask import jsonify
+from api.v1.views import app_views
 
 
 @app_views.route('/status', strict_slashes=False)
-def return_status():
-    '''returns the status.'''
+def returnstuff():
+    '''return stuff'''
     return jsonify(status='OK')
